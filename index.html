@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>AquaVita | Purificadores de Água Premium</title>
     
-    <!-- Google Fonts -->
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://images.unsplash.com">
+    <link rel="preconnect" href="https://drive.google.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet">
@@ -190,8 +192,18 @@
     <!-- HEADER -->
     <header class="fixed top-0 left-0 w-full z-50 transition-all duration-500" id="header">
         <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
-            <div class="font-display font-bold text-xl tracking-tighter text-dark">
-                AQUA<span class="text-primary">VITA</span>
+            <!-- SLIM TECH LOGO -->
+            <div class="flex items-center gap-4 group cursor-pointer">
+                <div class="w-7 h-7 flex items-center justify-center">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" class="w-full h-full text-primary transition-all duration-700 group-hover:rotate-180">
+                        <path d="M12 2L12 2C12 2 4 9 4 14C4 18.4183 7.58172 22 12 22C16.4183 22 20 18.4183 20 14C20 9 12 2 12 2Z" />
+                        <circle cx="12" cy="14" r="3" />
+                        <path d="M12 2V5" />
+                    </svg>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-display font-light text-base tracking-[0.4em] text-dark uppercase leading-none">Aqua<span class="text-primary/60">Vita</span></span>
+                </div>
             </div>
             <nav class="hidden md:flex gap-10 text-[11px] font-semibold text-dark/60 tracking-[0.15em] uppercase">
                 <a href="#diferenciais" class="hover:text-primary transition-colors">Tecnologia</a>
@@ -206,30 +218,98 @@
     </header>
 
     <!-- HERO SECTION -->
-    <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-32">
+    <section class="relative min-h-screen flex items-center overflow-hidden pt-32 lg:pt-20 bg-white">
         <!-- Background Decor -->
         <div class="absolute inset-0 z-0">
             <div class="absolute top-[-10%] right-[-10%] w-[50%] h-[50%] bg-primary/5 rounded-full blur-[120px]"></div>
             <div class="absolute bottom-[-10%] left-[-10%] w-[40%] h-[40%] bg-primary/5 rounded-full blur-[100px]"></div>
         </div>
 
-        <div class="relative z-10 max-w-5xl mx-auto px-6 text-center">
-            <div class="hero-elem inline-block mb-8 px-5 py-2 rounded-full border border-primary/10 bg-primary/5 text-[10px] font-bold tracking-[0.25em] uppercase text-primary">
-                O Futuro da Hidratação
+        <div class="relative z-10 max-w-7xl mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+                <!-- Text Content -->
+                <div class="w-full lg:w-1/2 text-center lg:text-left">
+                    <div class="hero-elem inline-block mb-8 px-5 py-2 rounded-full border border-primary/10 bg-primary/5 text-[10px] font-bold tracking-[0.25em] uppercase text-primary">
+                        O Futuro da Hidratação
+                    </div>
+                    <h1 class="hero-elem font-display text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1] mb-10 text-dark">
+                        A Essência da Vida,<br><span class="text-primary/80">em sua Melhor Forma.</span>
+                    </h1>
+                    <p class="hero-elem text-lg md:text-xl text-dark/50 font-light max-w-2xl lg:mx-0 mx-auto mb-14 leading-relaxed">
+                        Purificadores de alta performance que transformam água comum em uma fonte de saúde, vitalidade e longevidade para sua família.
+                    </p>
+                    <div class="hero-elem flex flex-col sm:flex-row gap-8 justify-center lg:justify-start items-center">
+                        <a href="https://wa.me/5554999997286" target="_blank" aria-label="Adquirir purificador agora" class="bg-primary text-white px-12 py-5 rounded-full font-bold tracking-widest uppercase text-xs cta-hover">
+                            Adquirir Agora
+                        </a>
+                        <a href="#diferenciais" aria-label="Conhecer tecnologia de purificação" class="text-dark/40 hover:text-primary text-[11px] font-bold tracking-[0.2em] uppercase transition-colors border-b border-dark/10 hover:border-primary pb-1">
+                            Conhecer Tecnologia
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Product Image Content -->
+                <div class="w-full lg:w-1/2 hero-elem">
+                    <div class="relative">
+                        <!-- Decorative elements -->
+                        <div class="absolute -top-10 -right-10 w-64 h-64 bg-primary/10 rounded-full blur-3xl animate-pulse"></div>
+                        <div class="absolute -bottom-10 -left-10 w-48 h-48 bg-primary/5 rounded-full blur-2xl"></div>
+                        
+                        <!-- Main Image Frame (Carousel) -->
+                        <div class="relative z-10 rounded-[2.5rem] md:rounded-[3.5rem] overflow-hidden shadow-2xl border border-dark/5 bg-light group aspect-[4/5] sm:aspect-square lg:aspect-[4/5] xl:h-[700px]">
+                            <div id="hero-carousel" class="relative h-full w-full overflow-hidden">
+                                <!-- Track -->
+                                <div id="carousel-track" class="flex h-full w-full transition-transform duration-700 ease-in-out">
+                                    <img src="https://lh3.googleusercontent.com/p/AF1QipOLD5WQwFRgDDuW0ML7Z4pCPRuiBG0Vay0SbQ1N=s1360-w1360-h1020-rw" class="w-full h-full object-cover object-center flex-shrink-0" alt="Instalação AquaVita 1">
+                                    <img src="https://lh3.googleusercontent.com/p/AF1QipMmb07QllFr_NKHtPGaou9iBkumiMghVgiGZreI=s1360-w1360-h1020-rw" class="w-full h-full object-cover object-center flex-shrink-0" alt="Instalação AquaVita 2">
+                                    <img src="https://lh3.googleusercontent.com/p/AF1QipOx3afzKjS4m5ci6F6zXGLG363ENVJcs8nxeRRM=s1360-w1360-h1020-rw" class="w-full h-full object-cover object-center flex-shrink-0" alt="Instalação AquaVita 3">
+                                    <img src="https://lh3.googleusercontent.com/p/AF1QipOid5nkjD9d2XyFMUQC_szPwGL6Oj2LbDZAjzVh=s1360-w1360-h1020-rw" class="w-full h-full object-cover object-center flex-shrink-0" alt="Instalação AquaVita 4">
+                                    <img src="https://lh3.googleusercontent.com/p/AF1QipMF3VtiK7Yhb5U64jNrNyPYhhB8dAMw1RPqjCn-=s1360-w1360-h1020-rw" class="w-full h-full object-cover object-center flex-shrink-0" alt="Instalação AquaVita 5">
+                                    <img src="https://lh3.googleusercontent.com/p/AF1QipMQRWZ2itHweXRwi5TRlD-qLcN2pnmRG7fZOpYD=s1360-w1360-h1020-rw" class="w-full h-full object-cover object-center flex-shrink-0" alt="Instalação AquaVita 6">
+                                    <img src="https://lh3.googleusercontent.com/p/AF1QipNIjjzov7Im8bAIHhYReaothXFINB-4G8AoHx2_=s1360-w1360-h1020-rw" class="w-full h-full object-cover object-center flex-shrink-0" alt="Instalação AquaVita 7">
+                                </div>
+
+                                <!-- Controls -->
+                                <div class="absolute inset-0 flex items-center justify-between px-6 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none">
+                                    <button id="prev-slide" class="w-12 h-12 rounded-full bg-white/90 backdrop-blur-md flex items-center justify-center text-dark shadow-xl pointer-events-auto hover:bg-primary hover:text-white transition-all transform hover:scale-110">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M15 18l-6-6 6-6"/></svg>
+                                    </button>
+                                    <button id="next-slide" class="w-12 h-12 rounded-full bg-white/90 backdrop-blur-md flex items-center justify-center text-dark shadow-xl pointer-events-auto hover:bg-primary hover:text-white transition-all transform hover:scale-110">
+                                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M9 18l6-6-6-6"/></svg>
+                                    </button>
+                                </div>
+
+                                <!-- Indicators -->
+                                <div id="carousel-indicators" class="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-3 z-20">
+                                    <!-- Dots generated by JS -->
+                                </div>
+                                
+                                <!-- Floating Badge -->
+                                <div class="absolute bottom-8 right-8 glass px-6 py-4 rounded-2xl border border-white/40 shadow-xl backdrop-blur-md z-30 pointer-events-none hidden md:block">
+                                    <div class="text-primary font-bold text-[8px] tracking-[0.2em] mb-1 uppercase">Instalação Real</div>
+                                    <div class="text-dark font-display font-bold text-sm tracking-tight">Design & Integração</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Trust Badge -->
+                        <div class="absolute -top-6 -left-6 z-20 bg-white p-4 rounded-2xl shadow-lg border border-dark/5 hidden md:flex items-center gap-3">
+                            <div class="w-10 h-10 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-500">
+                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6L9 17l-5-5"/></svg>
+                            </div>
+                            <div class="flex flex-col">
+                                <span class="text-[10px] font-black text-dark leading-none">5.0</span>
+                                <span class="text-[8px] text-dark/40 font-bold uppercase tracking-tighter">Avaliações Google</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <h1 class="hero-elem font-display text-5xl md:text-7xl lg:text-8xl font-bold tracking-tight leading-[1] mb-10 text-dark">
-                A Essência da Vida,<br><span class="text-primary/80">em sua Melhor Forma.</span>
-            </h1>
-            <p class="hero-elem text-lg md:text-xl text-dark/50 font-light max-w-2xl mx-auto mb-14 leading-relaxed">
-                Purificadores de alta performance que transformam água comum em uma fonte de saúde, vitalidade e longevidade para sua família.
-            </p>
-            <div class="hero-elem flex flex-col sm:flex-row gap-8 justify-center items-center">
-                <a href="https://wa.me/5554999997286" target="_blank" class="bg-primary text-white px-12 py-5 rounded-full font-bold tracking-widest uppercase text-xs cta-hover">
-                    Adquirir Agora
-                </a>
-                <a href="#diferenciais" class="text-dark/40 hover:text-primary text-[11px] font-bold tracking-[0.2em] uppercase transition-colors border-b border-dark/10 hover:border-primary pb-1">
-                    Conhecer Tecnologia
-                </a>
+
+            <!-- Scroll Indicator -->
+            <div class="hero-elem mt-20 hidden lg:flex flex-col items-center gap-4 opacity-20">
+                <span class="text-[8px] uppercase tracking-[0.4em] font-bold">Scroll</span>
+                <div class="w-px h-12 bg-gradient-to-b from-dark to-transparent"></div>
             </div>
         </div>
     </section>
@@ -256,48 +336,40 @@
 
     <!-- SOBRE / NOSSA ESSÊNCIA (OTIMIZADA PARA PC E MOBILE) -->
     <section id="sobre" class="py-32 relative border-b border-dark/5 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="flex flex-col lg:flex-row gap-20 items-center">
-                <div class="w-full lg:w-1/2 reveal">
-                    <div class="relative rounded-[2.5rem] overflow-hidden aspect-[4/5] border border-dark/5 group shadow-2xl bg-gray-50" id="sobre-image-container">
-                        <div id="sobre-image-placeholder" class="absolute inset-0 flex items-center justify-center">
-                            <div class="w-8 h-8 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
-                        </div>
-                        <img id="sobre-dynamic-image" src="" alt="Família Saudável AquaVita" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-0" loading="lazy" decoding="async" referrerPolicy="no-referrer">
-                        <div class="absolute inset-0 bg-gradient-to-t from-dark/20 via-transparent to-transparent"></div>
+        <div class="max-w-4xl mx-auto px-6 text-center reveal">
+            <div class="inline-block mb-6 px-4 py-1.5 rounded-full bg-primary/5 border border-primary/10 text-[10px] font-bold tracking-[0.2em] uppercase text-primary">
+                Nossa Essência
+            </div>
+            <h2 class="font-display text-4xl md:text-5xl font-bold tracking-tight mb-8 leading-[1.1] text-dark">
+                Sua Solução Completa<br>em Purificação.
+            </h2>
+            <div class="space-y-6 text-dark/50 font-light text-lg leading-relaxed">
+                <p>
+                    A AquaVita é referência em hidratação inteligente, oferecendo as melhores marcas do mercado como <strong>Hoken, Planeta Água e Ulfer</strong>. Nossa missão é garantir que sua família tenha acesso à água da mais alta qualidade, independente do seu equipamento.
+                </p>
+                <p>
+                    Além da venda de purificadores premium, somos especialistas em <strong>peças, acessórios e refis para todas as marcas do mercado</strong>. Atendemos toda a região Noroeste do Rio Grande do Sul com assistência técnica ágil e peças originais para manter seu sistema sempre perfeito.
+                </p>
+            </div>
+            
+            <div class="flex flex-wrap justify-center gap-12 mt-16">
+                <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m22 4-11 11-3-3"/></svg>
                     </div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-dark/60">Multimarcas</span>
                 </div>
-                
-                <div class="w-full lg:w-1/2 reveal">
-                    <div class="inline-block mb-6 px-4 py-1.5 rounded-full bg-primary/5 border border-primary/10 text-[10px] font-bold tracking-[0.2em] uppercase text-primary">
-                        Nossa Essência
+                <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m22 4-11 11-3-3"/></svg>
                     </div>
-                    <h2 class="font-display text-4xl md:text-5xl font-bold tracking-tight mb-8 leading-[1.1] text-dark">
-                        Sua Solução Completa<br>em Purificação.
-                    </h2>
-                    <div class="space-y-6 text-dark/50 font-light text-lg leading-relaxed">
-                        <p>
-                            A AquaVita é referência em hidratação inteligente, oferecendo as melhores marcas do mercado como <strong>Hoken, Planeta Água e Ulfer</strong>. Nossa missão é garantir que sua família tenha acesso à água da mais alta qualidade, independente do seu equipamento.
-                        </p>
-                        <p>
-                            Além da venda de purificadores premium, somos especialistas em <strong>peças, acessórios e refis para todas as marcas do mercado</strong>. Atendemos toda a região Noroeste do Rio Grande do Sul com assistência técnica ágil e peças originais para manter seu sistema sempre perfeito.
-                        </p>
+                    <span class="text-xs font-bold uppercase tracking-widest text-dark/60">Peças Originais</span>
+                </div>
+                <div class="flex items-center gap-3">
+                    <div class="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m22 4-11 11-3-3"/></svg>
                     </div>
-                    
-                    <div class="flex flex-wrap gap-8 mt-12">
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m22 4-11 11-3-3"/></svg>
-                            </div>
-                            <span class="text-xs font-bold uppercase tracking-widest text-dark/60">Multimarcas</span>
-                        </div>
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m22 4-11 11-3-3"/></svg>
-                            </div>
-                            <span class="text-xs font-bold uppercase tracking-widest text-dark/60">Peças Originais</span>
-                        </div>
-                    </div>
+                    <span class="text-xs font-bold uppercase tracking-widest text-dark/60">Assistência Técnica</span>
                 </div>
             </div>
         </div>
@@ -457,6 +529,29 @@
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[800px] h-[800px] bg-primary/5 rounded-full blur-[120px] -z-10"></div>
     </section>
 
+    <!-- PROCESSO SIMPLIFICADO (PARA LEIGOS E PESSOAS OCUPADAS) -->
+    <section class="py-24 bg-light border-y border-dark/5">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-12">
+                <div class="flex flex-col items-center text-center reveal">
+                    <div class="w-12 h-12 rounded-full bg-dark text-white flex items-center justify-center font-display font-bold mb-6">01</div>
+                    <h5 class="font-display font-bold text-lg mb-2">Consultoria Grátis</h5>
+                    <p class="text-xs text-dark/40 font-light">Analisamos sua necessidade e indicamos a melhor tecnologia.</p>
+                </div>
+                <div class="flex flex-col items-center text-center reveal">
+                    <div class="w-12 h-12 rounded-full bg-dark text-white flex items-center justify-center font-display font-bold mb-6">02</div>
+                    <h5 class="font-display font-bold text-lg mb-2">Instalação Ágil</h5>
+                    <p class="text-xs text-dark/40 font-light">Técnicos especialistas instalam sem sujeira em sua residência.</p>
+                </div>
+                <div class="flex flex-col items-center text-center reveal">
+                    <div class="w-12 h-12 rounded-full bg-dark text-white flex items-center justify-center font-display font-bold mb-6">03</div>
+                    <h5 class="font-display font-bold text-lg mb-2">Saúde Vitalícia</h5>
+                    <p class="text-xs text-dark/40 font-light">Acompanhamento preventivo para sua água estar sempre perfeita.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- ESPECIALIDADES TECNOLÓGICAS (OPÇÕES DE COMPRA) -->
     <section id="modelos" class="py-32 bg-white">
         <div class="max-w-7xl mx-auto px-6">
@@ -537,12 +632,19 @@
         <div class="max-w-7xl mx-auto px-6">
             <div class="flex flex-col lg:flex-row-reverse gap-20 items-center">
                 <div class="w-full lg:w-1/2 reveal">
-                    <div class="relative rounded-[2.5rem] overflow-hidden aspect-video border border-dark/5 group shadow-xl bg-gray-100" id="ozonio-image-container">
-                        <div id="ozonio-image-placeholder" class="absolute inset-0 flex items-center justify-center">
-                            <div class="w-8 h-8 border-4 border-primary border-t-transparent rounded-full animate-spin"></div>
-                        </div>
-                        <img id="ozonio-dynamic-image" src="" alt="Ozônio e Pureza" class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110 opacity-0" loading="lazy" decoding="async" referrerPolicy="no-referrer">
-                        <div class="absolute inset-0 bg-gradient-to-t from-dark/20 via-transparent to-transparent"></div>
+                    <div class="relative rounded-[2.5rem] overflow-hidden aspect-video border border-dark/5 group shadow-xl bg-gray-100" id="ozonio-video-container">
+                        <video 
+                            class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105" 
+                            autoplay 
+                            muted 
+                            loop 
+                            playsinline
+                            poster="https://images.unsplash.com/photo-1516733725897-1aa73b87c8e8?auto=format,compress&fm=webp&q=80&w=1200"
+                        >
+                            <source src="https://player.vimeo.com/external/370331493.sd.mp4?s=7b0d2735135a0e1486383057e65c31546274237c&profile_id=164&oauth2_token_id=57447761" type="video/mp4">
+                            Seu navegador não suporta vídeos.
+                        </video>
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark/20 via-transparent to-transparent pointer-events-none"></div>
                         <div class="absolute bottom-8 left-8">
                             <div class="px-4 py-2 rounded-full glass border border-white/40 text-xs font-bold uppercase tracking-widest text-dark">Tecnologia O₃</div>
                         </div>
@@ -559,8 +661,8 @@
                                 <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
                             </div>
                             <div>
-                                <h4 class="font-display font-bold text-xl mb-2 text-dark">Esterilização Natural</h4>
-                                <p class="text-dark/50 font-light leading-relaxed">O ozônio é um dos oxidantes mais potentes da natureza, capaz de eliminar 99,9% de vírus, bactérias e fungos de forma 3.000 vezes mais rápida que o cloro.</p>
+                                <h4 class="font-display font-bold text-xl mb-2 text-dark">Escudo Contra Agrotóxicos</h4>
+                                <p class="text-dark/50 font-light leading-relaxed">Essencial para famílias e agricultores: o ozônio degrada moléculas de pesticidas e herbicidas presentes na superfície de frutas e vegetais.</p>
                             </div>
                         </div>
                         <div class="flex gap-6">
@@ -649,13 +751,13 @@
                         Nosso organismo luta diariamente contra a acidez causada pelo estresse e má alimentação. A água alcalina ionizada é a ferramenta definitiva para restaurar sua vitalidade.
                     </p>
                     <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                        <div class="glass-card p-6 rounded-3xl">
-                            <h4 class="font-display font-bold text-lg mb-2 text-primary">Hidratação 6x Maior</h4>
-                            <p class="text-xs text-dark/50 font-light leading-relaxed">Clusters menores que penetram nas células com facilidade.</p>
+                        <div class="glass-card p-6 rounded-3xl border-l-4 border-primary">
+                            <h4 class="font-display font-bold text-lg mb-2 text-primary">Equilíbrio Metabólico</h4>
+                            <p class="text-xs text-dark/50 font-light leading-relaxed">Auxilia na regulação do pH sanguíneo, otimizando processos enzimáticos e reduzindo a fadiga.</p>
                         </div>
                         <div class="glass-card p-6 rounded-3xl">
                             <h4 class="font-display font-bold text-lg mb-2 text-primary">Poder Antioxidante</h4>
-                            <p class="text-xs text-dark/50 font-light leading-relaxed">Combate radicais livres e o envelhecimento precoce.</p>
+                            <p class="text-xs text-dark/50 font-light leading-relaxed">Combate radicais livres e o envelhecimento precoce através da ionização negativa.</p>
                         </div>
                     </div>
                 </div>
@@ -846,9 +948,9 @@
         <div class="max-w-4xl mx-auto px-6 text-center reveal">
             <h2 class="font-display text-5xl md:text-7xl font-bold tracking-tight mb-8 text-dark">Eleve sua água.<br>Eleve sua vida.</h2>
             <p class="text-dark/50 text-lg font-light mb-12 max-w-xl mx-auto">
-                Fale com nossos especialistas e descubra qual modelo da linha Hoken é perfeito para o seu estilo de vida.
+                Fale com nossos especialistas e descubra qual modelo das nossas marcas premium é perfeito para o seu estilo de vida.
             </p>
-            <a href="https://wa.me/5554999997286" target="_blank" class="inline-flex items-center gap-3 bg-dark text-white px-12 py-5 rounded-full font-medium tracking-wide cta-hover">
+            <a href="https://wa.me/5554999997286" target="_blank" aria-label="Falar com especialista no WhatsApp" class="inline-flex items-center gap-3 bg-dark text-white px-12 py-5 rounded-full font-medium tracking-wide cta-hover">
                 Falar com Especialista
                 <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
             </a>
@@ -856,23 +958,32 @@
     </section>
 
     <!-- WHATSAPP FLOAT -->
-    <a href="https://wa.me/5554999997286" target="_blank" class="whatsapp-float">
+    <a href="https://wa.me/5554999997286" target="_blank" aria-label="Contato via WhatsApp" class="whatsapp-float">
         <svg width="32" height="32" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
     </a>
 
     <!-- BACK TO TOP -->
-    <button id="back-to-top" class="fixed bottom-10 left-10 w-12 h-12 rounded-full bg-white border border-dark/5 text-dark/40 flex items-center justify-center opacity-0 invisible transition-all duration-500 hover:text-primary hover:border-primary/20 z-50 shadow-sm">
+    <button id="back-to-top" aria-label="Voltar ao topo" class="fixed bottom-10 left-10 w-12 h-12 rounded-full bg-white border border-dark/5 text-dark/40 flex items-center justify-center opacity-0 invisible transition-all duration-500 hover:text-primary hover:border-primary/20 z-50 shadow-sm">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 15l-6-6-6 6"/></svg>
     </button>
 
     <!-- FOOTER -->
-    <footer class="py-12 border-t border-dark/5 bg-white">
-        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-6">
-            <div class="font-display font-bold text-xl tracking-tighter text-dark">
-                AQUA<span class="text-primary">VITA</span>
+    <footer class="py-16 border-t border-dark/5 bg-white">
+        <div class="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-10">
+            <!-- SLIM TECH LOGO FOOTER -->
+            <div class="flex items-center gap-3">
+                <div class="w-6 h-6 flex items-center justify-center">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1" class="w-full h-full text-primary">
+                        <path d="M12 2L12 2C12 2 4 9 4 14C4 18.4183 7.58172 22 12 22C16.4183 22 20 18.4183 20 14C20 9 12 2 12 2Z" />
+                        <circle cx="12" cy="14" r="3" />
+                    </svg>
+                </div>
+                <div class="flex flex-col">
+                    <span class="font-display font-light text-sm tracking-[0.4em] text-dark uppercase leading-none">AquaVita</span>
+                </div>
             </div>
-            <div class="text-dark/40 text-sm font-light text-center md:text-left">
-                &copy; 2026 AquaVita Purificadores - Especialista Multimarcas. Todos os direitos reservados.
+            <div class="text-dark/40 text-[10px] font-light text-center md:text-left tracking-widest">
+                &copy; 2026 AquaVita Purificadores - Especialista Multimarcas.
             </div>
             <div class="flex gap-6 text-sm font-medium text-dark/50 uppercase tracking-widest">
                 <a href="https://instagram.com/aquavitapurificadores" target="_blank" class="hover:text-primary transition-colors">Instagram</a>
@@ -969,59 +1080,72 @@
         }
     </script>
 
-    <!-- UNIFIED AI IMAGE GENERATION SCRIPT -->
+    <!-- UNIFIED SCRIPTS -->
     <script type="module">
-        import { GoogleGenAI } from "@google/genai";
-
-        async function loadAIImage(imgId, placeholderId, prompt, aspectRatio) {
-            const imgElement = document.getElementById(imgId);
-            const placeholder = document.getElementById(placeholderId);
-            if (!imgElement || !placeholder) return;
-
-            try {
-                const ai = new GoogleGenAI({ apiKey: "process.env.GEMINI_API_KEY" });
-                const response = await ai.models.generateContent({
-                    model: 'gemini-2.5-flash-image',
-                    contents: { parts: [{ text: prompt }] },
-                    config: { imageConfig: { aspectRatio: aspectRatio } }
-                });
-
-                for (const part of response.candidates[0].content.parts) {
-                    if (part.inlineData) {
-                        imgElement.src = `data:image/png;base64,${part.inlineData.data}`;
-                        imgElement.classList.remove('opacity-0');
-                        placeholder.classList.add('hidden');
-                        return;
-                    }
-                }
-                throw new Error("No image data found");
-            } catch (error) {
-                console.error(`Erro ao gerar imagem (${imgId}):`, error);
-                // Fallbacks
-                if (imgId === 'sobre-dynamic-image') {
-                    imgElement.src = "https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=60&w=1000&auto=format&fit=crop";
-                } else {
-                    imgElement.src = "https://images.unsplash.com/photo-1516733725897-1aa73b87c8e8?q=60&w=1000&auto=format&fit=crop";
-                }
-                imgElement.classList.remove('opacity-0');
-                placeholder.classList.add('hidden');
-            }
-        }
-
         window.addEventListener('load', () => {
-            // Load both images in parallel
-            loadAIImage(
-                'sobre-dynamic-image', 
-                'sobre-image-placeholder', 
-                "A beautiful happy family (father, mother, and two children) drinking crystal clear water together in a high-end luxury modern kitchen. Bright natural morning light, minimalist white and wood interior, premium wellness lifestyle, professional editorial photography, 8k resolution.",
-                "3:4"
-            );
-            loadAIImage(
-                'ozonio-dynamic-image', 
-                'ozonio-image-placeholder', 
-                "High-end professional photography of fresh organic vegetables being washed in a glass bowl with crystal clear water and active ozone bubbles. Soft natural lighting, minimalist modern kitchen background, premium wellness aesthetic, 4k.",
-                "16:9"
-            );
+            // Carousel Logic
+            const track = document.getElementById('carousel-track');
+            const slides = Array.from(track.children);
+            const nextButton = document.getElementById('next-slide');
+            const prevButton = document.getElementById('prev-slide');
+            const dotsNav = document.getElementById('carousel-indicators');
+            
+            let currentIndex = 0;
+            const slideCount = slides.length;
+
+            // Create dots
+            slides.forEach((_, index) => {
+                const dot = document.createElement('button');
+                dot.classList.add('w-2', 'h-2', 'rounded-full', 'bg-dark/20', 'transition-all', 'duration-300');
+                if (index === 0) dot.classList.add('bg-primary', 'w-6');
+                dot.addEventListener('click', () => goToSlide(index));
+                dotsNav.appendChild(dot);
+            });
+
+            const dots = Array.from(dotsNav.children);
+
+            const updateDots = (index) => {
+                dots.forEach((dot, i) => {
+                    dot.classList.remove('bg-primary', 'w-6');
+                    dot.classList.add('bg-dark/20');
+                    if (i === index) {
+                        dot.classList.add('bg-primary', 'w-6');
+                        dot.classList.remove('bg-dark/20');
+                    }
+                });
+            };
+
+            const goToSlide = (index) => {
+                currentIndex = index;
+                track.style.transform = `translateX(-${index * 100}%)`;
+                updateDots(index);
+            };
+
+            nextButton.addEventListener('click', () => {
+                currentIndex = (currentIndex + 1) % slideCount;
+                goToSlide(currentIndex);
+            });
+
+            prevButton.addEventListener('click', () => {
+                currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+                goToSlide(currentIndex);
+            });
+
+            // Auto-play
+            let autoPlayInterval = setInterval(() => {
+                currentIndex = (currentIndex + 1) % slideCount;
+                goToSlide(currentIndex);
+            }, 5000);
+
+            // Pause auto-play on hover
+            const carouselContainer = document.getElementById('hero-carousel');
+            carouselContainer.addEventListener('mouseenter', () => clearInterval(autoPlayInterval));
+            carouselContainer.addEventListener('mouseleave', () => {
+                autoPlayInterval = setInterval(() => {
+                    currentIndex = (currentIndex + 1) % slideCount;
+                    goToSlide(currentIndex);
+                }, 5000);
+            });
         });
     </script>
 </body>
