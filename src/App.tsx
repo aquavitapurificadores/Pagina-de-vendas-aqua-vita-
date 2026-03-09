@@ -1202,27 +1202,133 @@ export default function App() {
     </button>
 
     {/*  FOOTER  */}
-    <footer className="py-16 border-t border-dark/5 bg-white">
-        <div className="max-w-7xl mx-auto px-6 flex flex-col md:flex-row justify-between items-center gap-10">
-            {/*  SLIM TECH LOGO FOOTER  */}
-            <div className="flex items-center gap-3">
-                <div className="w-6 h-6 flex items-center justify-center">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" className="w-full h-full text-primary">
-                        <path d="M12 2L12 2C12 2 4 9 4 14C4 18.4183 7.58172 22 12 22C16.4183 22 20 18.4183 20 14C20 9 12 2 12 2Z" />
-                        <circle cx="12" cy="14" r="3" />
-                        <path d="M12 2V5" />
-                    </svg>
+    <footer className="bg-dark text-white pt-24 pb-12 relative overflow-hidden">
+        {/* Subtle top gradient line */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-4xl h-px bg-gradient-to-r from-transparent via-primary/50 to-transparent"></div>
+
+        <div className="max-w-7xl mx-auto px-6">
+            <div className="grid grid-cols-1 lg:grid-cols-12 gap-16 lg:gap-12 mb-20">
+                {/*  Left Side: Logo & Info (col-span-4)  */}
+                <div className="lg:col-span-4 flex flex-col gap-8">
+                    <div className="flex items-center gap-3">
+                        <div className="w-8 h-8 flex items-center justify-center">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" className="w-full h-full text-primary">
+                                <path d="M12 2L12 2C12 2 4 9 4 14C4 18.4183 7.58172 22 12 22C16.4183 22 20 18.4183 20 14C20 9 12 2 12 2Z" />
+                                <circle cx="12" cy="14" r="3" />
+                                <path d="M12 2V5" />
+                            </svg>
+                        </div>
+                        <div className="flex flex-col">
+                            <span className="font-display font-light text-xl tracking-[0.4em] text-white uppercase leading-none">Aqua<span className="text-primary">Vita</span></span>
+                        </div>
+                    </div>
+                    <p className="text-white/60 text-sm font-light leading-relaxed max-w-sm">
+                        Especialistas em purificação de água. Levando saúde, tecnologia e design premium para a sua casa ou empresa.
+                    </p>
+                    <div className="flex gap-4 mt-2">
+                        <a href="https://instagram.com/aquavitapurificadores" target="_blank" rel="noopener noreferrer" aria-label="Instagram" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/70 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        </a>
+                        <a href="https://wa.me/5554999997286" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp" className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/70 hover:bg-primary hover:text-white hover:border-primary transition-all duration-300">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path></svg>
+                        </a>
+                    </div>
                 </div>
-                <div className="flex flex-col">
-                    <span className="font-display font-light text-sm tracking-[0.4em] text-dark uppercase leading-none">Aqua<span className="text-primary/60">Vita</span></span>
+
+                {/* Middle: Links & Contact (col-span-3) */}
+                <div className="lg:col-span-3 flex flex-col gap-10">
+                    <div>
+                        <h4 className="font-bold text-sm tracking-widest uppercase text-white mb-6">Navegação</h4>
+                        <ul className="flex flex-col gap-3 text-sm text-white/60 font-light">
+                            <li><a href="#diferenciais" className="hover:text-primary transition-colors">Tecnologia</a></li>
+                            <li><a href="#ozonio" className="hover:text-primary transition-colors">Poder do Ozônio</a></li>
+                            <li><a href="#alcalina" className="hover:text-primary transition-colors">Água Alcalina</a></li>
+                            <li><a href="#sobre" className="hover:text-primary transition-colors">Sobre Nós</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h4 className="font-bold text-sm tracking-widest uppercase text-white mb-6">Atendimento</h4>
+                        <ul className="flex flex-col gap-3 text-sm text-white/60 font-light">
+                            <li className="flex items-center gap-2">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                Seg a Sex: 08h às 18h
+                            </li>
+                            <li className="flex items-center gap-2">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                                Sábado: 08h às 12h
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+
+                {/*  Right Side: Contact Form (col-span-5)  */}
+                <div className="lg:col-span-5">
+                    <div className="bg-white/5 border border-white/10 rounded-3xl p-8 backdrop-blur-sm">
+                        <h3 className="font-display text-2xl font-bold tracking-tight text-white mb-2">Fale Conosco</h3>
+                        <p className="text-white/60 text-sm font-light mb-6">Envie sua dúvida e responderemos rapidamente via WhatsApp.</p>
+                        <form className="flex flex-col gap-4" onSubmit={(e) => {
+                            e.preventDefault();
+                            const formData = new FormData(e.currentTarget);
+                            const name = formData.get('name');
+                            const email = formData.get('email');
+                            const message = formData.get('message');
+                            
+                            // Construct WhatsApp message
+                            const text = `Olá! Meu nome é ${name} (${email}).\n\nMensagem: ${message}`;
+                            const encodedText = encodeURIComponent(text);
+                            window.open(`https://wa.me/5554999997286?text=${encodedText}`, '_blank');
+                            
+                            e.currentTarget.reset();
+                        }}>
+                            <div>
+                                <input 
+                                    type="text" 
+                                    name="name"
+                                    id="name" 
+                                    required
+                                    placeholder="Seu Nome" 
+                                    className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-sm text-white placeholder:text-white/30 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all"
+                                />
+                            </div>
+                            <div>
+                                <input 
+                                    type="email" 
+                                    name="email"
+                                    id="email" 
+                                    required
+                                    placeholder="Seu E-mail" 
+                                    className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-sm text-white placeholder:text-white/30 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all"
+                                />
+                            </div>
+                            <div>
+                                <textarea 
+                                    name="message"
+                                    id="message" 
+                                    required
+                                    placeholder="Sua Mensagem" 
+                                    rows={3}
+                                    className="w-full bg-white/5 border border-white/10 rounded-xl px-5 py-4 text-sm text-white placeholder:text-white/30 focus:outline-none focus:border-primary/50 focus:ring-1 focus:ring-primary/50 transition-all resize-none"
+                                ></textarea>
+                            </div>
+                            <button 
+                                type="submit" 
+                                className="bg-primary text-white rounded-xl px-8 py-4 text-xs font-bold uppercase tracking-widest hover:bg-white hover:text-dark transition-colors mt-2 w-full"
+                            >
+                                Enviar Mensagem
+                            </button>
+                        </form>
+                    </div>
                 </div>
             </div>
-            <div className="text-dark/40 text-[10px] font-light text-center md:text-left tracking-widest">
-                &copy; 2026 AquaVita Purificadores - Especialista Multimarcas.
-            </div>
-            <div className="flex gap-6 text-sm font-medium text-dark/50 uppercase tracking-widest">
-                <a href="https://instagram.com/aquavitapurificadores" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">Instagram</a>
-                <a href="https://wa.me/5554999997286" target="_blank" rel="noopener noreferrer" className="hover:text-primary transition-colors">WhatsApp</a>
+
+            {/* Bottom Bar */}
+            <div className="pt-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+                <div className="text-white/40 text-[10px] font-light tracking-widest uppercase text-center md:text-left">
+                    &copy; 2026 AquaVita Purificadores. Todos os direitos reservados.
+                </div>
+                <div className="text-white/40 text-[10px] font-light tracking-widest uppercase">
+                    Design Premium
+                </div>
             </div>
         </div>
     </footer>
