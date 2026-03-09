@@ -1,1 +1,156 @@
 @import "tailwindcss";
+
+@theme {
+  --color-light: #FDFDFD;
+  --color-lighter: #FFFFFF;
+  --color-dark: #1A1A1A;
+  --color-primary: #0891B2;
+  --color-secondary: #64748B;
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Syne', sans-serif;
+}
+
+/* Custom Styles & Utilities */
+body {
+    background-color: var(--color-light);
+    color: var(--color-dark);
+    overflow-x: hidden;
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.glass-card {
+    background: #FFFFFF;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.04);
+    transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card:hover {
+    border-color: rgba(8, 145, 178, 0.15);
+    box-shadow: 0 30px 60px -12px rgba(0, 0, 0, 0.08), 0 18px 36px -18px rgba(0, 0, 0, 0.05);
+    transform: translateY(-10px);
+}
+
+.text-gradient {
+    background: linear-gradient(to right, #1A1A1A, #4A4A4A);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Marquee Animation */
+.marquee-container {
+    display: flex;
+    overflow: hidden;
+    user-select: none;
+    gap: 2rem;
+}
+@media (min-width: 768px) {
+    .marquee-container {
+        gap: 4rem;
+    }
+}
+
+.marquee-content {
+    flex-shrink: 0;
+    display: flex;
+    justify-content: space-around;
+    min-width: 100%;
+    gap: 2rem;
+    animation: scroll 30s linear infinite;
+}
+@media (min-width: 768px) {
+    .marquee-content {
+        gap: 4rem;
+    }
+}
+
+@keyframes scroll {
+    from { transform: translateX(0); }
+    to { transform: translateX(calc(-100% - 2rem)); }
+}
+@media (min-width: 768px) {
+    @keyframes scroll {
+        from { transform: translateX(0); }
+        to { transform: translateX(calc(-100% - 4rem)); }
+    }
+}
+
+/* Subtle Hover Animation for CTA Buttons */
+.cta-hover {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.cta-hover:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 24px -8px rgba(8, 145, 178, 0.3);
+}
+
+/* FAQ Accordion */
+.faq-item {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+}
+.faq-answer {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.5s cubic-bezier(0, 1, 0, 1);
+}
+.faq-item.active .faq-answer {
+    max-height: 1000px;
+    transition: max-height 0.8s ease-in-out;
+}
+.faq-item.active .faq-icon {
+    transform: rotate(180deg);
+    color: var(--color-primary);
+}
+
+/* Floating WhatsApp */
+.whatsapp-float {
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    z-index: 100;
+    background-color: #25d366;
+    color: white;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 25px -5px rgba(37, 211, 102, 0.4);
+    transition: all 0.3s ease;
+}
+.whatsapp-float:hover {
+    transform: scale(1.1) translateY(-5px);
+    box-shadow: 0 15px 30px -5px rgba(37, 211, 102, 0.5);
+}
+
+/* Floating Animation for Hero Image */
+@keyframes float {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+    100% { transform: translateY(0px); }
+}
+.hover-float {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Section Spacing */
+section {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+}
+@media (min-width: 768px) {
+    section {
+        padding-top: 8rem;
+        padding-bottom: 8rem;
+    }
+}
