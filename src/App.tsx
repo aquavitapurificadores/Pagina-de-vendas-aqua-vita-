@@ -195,6 +195,30 @@ export default function App() {
                             Conhecer Tecnologia
                         </a>
                     </div>
+                    
+                    {/* Social Proof Badge */}
+                    <div className="hero-elem mt-12 flex items-center justify-center lg:justify-start gap-4">
+                        <div className="flex -space-x-3">
+                            <img src="https://i.pravatar.cc/100?img=1" alt="Cliente" className="w-10 h-10 rounded-full border-2 border-white shadow-sm" referrerPolicy="no-referrer" />
+                            <img src="https://i.pravatar.cc/100?img=2" alt="Cliente" className="w-10 h-10 rounded-full border-2 border-white shadow-sm" referrerPolicy="no-referrer" />
+                            <img src="https://i.pravatar.cc/100?img=3" alt="Cliente" className="w-10 h-10 rounded-full border-2 border-white shadow-sm" referrerPolicy="no-referrer" />
+                            <div className="w-10 h-10 rounded-full border-2 border-white bg-light flex items-center justify-center shadow-sm z-10">
+                                <span className="text-[10px] font-bold text-primary">+2k</span>
+                            </div>
+                        </div>
+                        <div className="flex flex-col text-left">
+                            <div className="flex items-center gap-1 text-yellow-500 mb-0.5">
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            </div>
+                            <span className="text-[11px] font-medium text-dark/70">
+                                Mais de <strong className="text-dark">2.000 famílias</strong> beneficiadas<br/>que confiam e recomendam.
+                            </span>
+                        </div>
+                    </div>
                 </div>
 
                 {/*  Product Image Content  */}
@@ -346,47 +370,6 @@ export default function App() {
         </div>
     </section>
 
-    {/*  SOBRE / NOSSA ESSÊNCIA (OTIMIZADA PARA PC E MOBILE)  */}
-    <section id="sobre" className="py-32 relative border-b border-dark/5 bg-white">
-        <div className="max-w-4xl mx-auto px-6 text-center reveal">
-            <div className="inline-block mb-6 px-4 py-1.5 rounded-full bg-primary/5 border border-primary/10 text-[10px] font-bold tracking-[0.2em] uppercase text-primary">
-                Nossa Essência
-            </div>
-            <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight mb-8 leading-[1.1] text-dark">
-                Sua Solução Completa<br />em Purificação.
-            </h2>
-            <div className="space-y-6 text-dark/50 font-light text-lg leading-relaxed">
-                <p>
-                    A AquaVita é referência em hidratação inteligente, oferecendo as melhores marcas do mercado como <strong>Hoken, Planeta Água e Ulfer</strong>. Nossa missão é garantir que sua família tenha acesso à água da mais alta qualidade, independente do seu equipamento.
-                </p>
-                <p>
-                    Além da venda de purificadores premium, somos especialistas em <strong>peças, acessórios e refis para todas as marcas do mercado</strong>. Atendemos toda a região Noroeste do Rio Grande do Sul com assistência técnica ágil e peças originais para manter seu sistema sempre perfeito.
-                </p>
-            </div>
-            
-            <div className="flex flex-wrap justify-center gap-12 mt-16">
-                <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m22 4-11 11-3-3"/></svg>
-                    </div>
-                    <span className="text-xs font-bold uppercase tracking-widest text-dark/60">Multimarcas</span>
-                </div>
-                <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m22 4-11 11-3-3"/></svg>
-                    </div>
-                    <span className="text-xs font-bold uppercase tracking-widest text-dark/60">Peças Originais</span>
-                </div>
-                <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m22 4-11 11-3-3"/></svg>
-                    </div>
-                    <span className="text-xs font-bold uppercase tracking-widest text-dark/60">Assistência Técnica</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
     {/*  DIFERENCIAIS (OS 3 PILARES)  */}
     <section id="diferenciais" className="py-32 bg-light">
         <div className="max-w-7xl mx-auto px-6">
@@ -398,8 +381,13 @@ export default function App() {
             <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
                 {/*  Pureza  */}
                 <div className="reveal glass-card rounded-[2.5rem] p-8 md:p-12 group">
-                    <div className="w-16 h-16 rounded-2xl bg-primary/5 flex items-center justify-center mb-10 group-hover:bg-primary group-hover:text-white transition-all duration-500">
+                    <div className="w-16 h-16 rounded-2xl bg-primary/5 flex items-center justify-center mb-10 group-hover:bg-primary group-hover:text-white transition-all duration-500 relative cursor-help">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                        {/* Tooltip */}
+                        <div className="absolute -top-12 left-1/2 -translate-x-1/2 bg-dark text-white text-xs px-3 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap z-10 shadow-xl">
+                            Água 100% livre de impurezas
+                            <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-dark rotate-45"></div>
+                        </div>
                     </div>
                     <h3 className="font-display text-2xl font-bold mb-4 text-dark">Pureza Absoluta</h3>
                     <p className="text-dark/40 font-light leading-relaxed">Retenção de partículas, cloro e metais pesados através de nanotecnologia de carvão ativado.</p>
@@ -407,8 +395,13 @@ export default function App() {
 
                 {/*  Alcalinidade  */}
                 <div className="reveal glass-card rounded-[2.5rem] p-8 md:p-12 group">
-                    <div className="w-16 h-16 rounded-2xl bg-primary/5 flex items-center justify-center mb-10 group-hover:bg-primary group-hover:text-white transition-all duration-500">
+                    <div className="w-16 h-16 rounded-2xl bg-primary/5 flex items-center justify-center mb-10 group-hover:bg-primary group-hover:text-white transition-all duration-500 relative cursor-help">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                        {/* Tooltip */}
+                        <div className="absolute -top-12 left-1/2 -translate-x-1/2 bg-dark text-white text-xs px-3 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap z-10 shadow-xl">
+                            Equilibra o pH do seu corpo
+                            <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-dark rotate-45"></div>
+                        </div>
                     </div>
                     <h3 className="font-display text-2xl font-bold mb-4 text-dark">Água Alcalina</h3>
                     <p className="text-dark/40 font-light leading-relaxed">Ionização que eleva o pH da água, combatendo a acidez do corpo e o envelhecimento precoce.</p>
@@ -416,11 +409,231 @@ export default function App() {
 
                 {/*  Ozônio  */}
                 <div className="reveal glass-card rounded-[2.5rem] p-8 md:p-12 group">
-                    <div className="w-16 h-16 rounded-2xl bg-primary/5 flex items-center justify-center mb-10 group-hover:bg-primary group-hover:text-white transition-all duration-500">
+                    <div className="w-16 h-16 rounded-2xl bg-primary/5 flex items-center justify-center mb-10 group-hover:bg-primary group-hover:text-white transition-all duration-500 relative cursor-help">
                         <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 12m-9 0a9 9 0 1 0 18 0a9 9 0 1 0 -18 0"/><path d="M12 12m-1 0a1 1 0 1 0 2 0a1 1 0 1 0 -2 0"/><path d="M7 12l10 0"/><path d="M12 7l0 10"/></svg>
+                        {/* Tooltip */}
+                        <div className="absolute -top-12 left-1/2 -translate-x-1/2 bg-dark text-white text-xs px-3 py-2 rounded-lg opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none whitespace-nowrap z-10 shadow-xl">
+                            Elimina bactérias e agrotóxicos
+                            <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 w-2 h-2 bg-dark rotate-45"></div>
+                        </div>
                     </div>
                     <h3 className="font-display text-2xl font-bold mb-4 text-dark">Ozônio Ativo</h3>
                     <p className="text-dark/40 font-light leading-relaxed">Esterilização por O₃ que elimina 99.9% de vírus e bactérias, além de remover agrotóxicos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {/*  ÁGUA ALCALINA (DETALHAMENTO)  */}
+    <section id="alcalina" className="py-32 relative bg-white">
+        <div className="max-w-7xl mx-auto px-6">
+            {/*  Text Content First  */}
+            <div className="text-center max-w-3xl mx-auto mb-20 reveal">
+                <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight mb-8 leading-[1.1] text-dark">
+                    O Equilíbrio que seu<br /><span className="text-dark/30">Corpo Merece.</span>
+                </h2>
+                <p className="text-dark/50 text-lg font-light leading-relaxed mb-10">
+                    Nosso organismo luta diariamente contra a acidez causada pelo estresse e má alimentação. A água alcalina ionizada é a ferramenta definitiva para restaurar sua vitalidade.
+                </p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-left">
+                    <div className="glass-card p-6 rounded-3xl border-l-4 border-primary">
+                        <h4 className="font-display font-bold text-lg mb-2 text-primary">Equilíbrio Metabólico</h4>
+                        <p className="text-xs text-dark/50 font-light leading-relaxed">Auxilia na regulação do pH sanguíneo, otimizando processos enzimáticos e reduzindo a fadiga.</p>
+                    </div>
+                    <div className="glass-card p-6 rounded-3xl border-l-4 border-dark/10">
+                        <h4 className="font-display font-bold text-lg mb-2 text-dark">Poder Antioxidante</h4>
+                        <p className="text-xs text-dark/50 font-light leading-relaxed">Combate radicais livres e o envelhecimento precoce através da ionização negativa.</p>
+                    </div>
+                </div>
+            </div>
+
+            {/*  Ultra-Premium Responsive Horizontal pH Scale  */}
+            <div className="w-full reveal">
+                <div className="mt-16 flex flex-col p-6 md:p-12 rounded-[2.5rem] md:rounded-[3rem] bg-light border border-dark/5 relative overflow-hidden shadow-sm">
+                    <div className="text-center max-w-3xl mx-auto mb-12">
+                        <h4 className="font-display font-bold text-3xl md:text-4xl text-dark mb-4">Pilar de Vitalidade</h4>
+                        <p className="text-[10px] text-dark/40 uppercase tracking-[0.2em] font-bold mb-6">Monitoramento de pH</p>
+                        <p className="text-dark/50 text-base font-light leading-relaxed mb-8">
+                            Visualize o espectro da saúde. Enquanto a maioria das águas e bebidas comuns puxam seu corpo para a zona ácida, a AquaVita mantém você na <strong>Zona de Saúde Máxima</strong>.
+                        </p>
+                    </div>
+
+                    {/*  Horizontal Scale  */}
+                    <div className="w-full relative pt-24 pb-32 md:pt-28 md:pb-36 px-4 md:px-8 max-w-5xl mx-auto">
+                        
+                        {/*  Top Markers (Acidic/Neutral)  */}
+                        <div className="absolute top-0 left-[17.85%] -translate-x-1/2 flex flex-col items-center gap-2 opacity-80 hover:opacity-100 transition-opacity group">
+                            <div className="flex flex-col items-center transform group-hover:-translate-y-1 transition-transform">
+                                <span className="text-[9px] sm:text-[10px] md:text-xs font-bold text-dark/80 whitespace-nowrap">Refrigerante</span>
+                                <span className="text-[8px] sm:text-[9px] text-red-500 font-bold">pH 3.0</span>
+                            </div>
+                            <div className="w-px h-8 md:h-12 bg-red-500/30"></div>
+                        </div>
+
+                        <div className="absolute top-0 left-[32.13%] -translate-x-1/2 hidden sm:flex flex-col items-center gap-2 opacity-80 hover:opacity-100 transition-opacity group">
+                            <div className="flex flex-col items-center transform group-hover:-translate-y-1 transition-transform">
+                                <span className="text-[10px] md:text-xs font-bold text-dark/80 whitespace-nowrap">Café</span>
+                                <span className="text-[9px] text-yellow-600 font-bold">pH 5.0</span>
+                            </div>
+                            <div className="w-px h-8 md:h-12 bg-yellow-600/30"></div>
+                        </div>
+
+                        <div className="absolute top-0 left-[46.41%] -translate-x-1/2 flex flex-col items-center gap-2 opacity-80 hover:opacity-100 transition-opacity group">
+                            <div className="flex flex-col items-center transform group-hover:-translate-y-1 transition-transform">
+                                <span className="text-[9px] sm:text-[10px] md:text-xs font-bold text-dark/80 whitespace-nowrap">Água Comum</span>
+                                <span className="text-[8px] sm:text-[9px] text-green-600 font-bold">pH 7.0</span>
+                            </div>
+                            <div className="w-px h-8 md:h-12 bg-green-600/30"></div>
+                        </div>
+
+                        {/*  The Color Bar  */}
+                        <div className="flex w-full h-6 md:h-10 rounded-full overflow-hidden shadow-inner border border-dark/10">
+                            <div className="flex-1 bg-[#dc2626]"></div> {/*  1  */}
+                            <div className="flex-1 bg-[#ef4444]"></div> {/*  2  */}
+                            <div className="flex-1 bg-[#f97316]"></div> {/*  3  */}
+                            <div className="flex-1 bg-[#f59e0b]"></div> {/*  4  */}
+                            <div className="flex-1 bg-[#eab308]"></div> {/*  5  */}
+                            <div className="flex-1 bg-[#fde047]"></div> {/*  6  */}
+                            <div className="flex-1 bg-[#22c55e]"></div> {/*  7  */}
+                            <div className="flex-1 bg-[#10b981]"></div> {/*  8  */}
+                            <div className="flex-1 bg-[#06b6d4]"></div> {/*  9  */}
+                            <div className="flex-1 bg-[#0ea5e9]"></div> {/*  10  */}
+                            <div className="flex-1 bg-[#3b82f6]"></div> {/*  11  */}
+                            <div className="flex-1 bg-[#6366f1]"></div> {/*  12  */}
+                            <div className="flex-1 bg-[#8b5cf6]"></div> {/*  13  */}
+                            <div className="flex-1 bg-[#a855f7]"></div> {/*  14  */}
+                        </div>
+
+                        {/*  Numbers  */}
+                        <div className="flex w-full justify-between px-2 md:px-4 mt-3 text-[8px] sm:text-[10px] md:text-xs font-bold text-dark/30">
+                            <span className="flex-1 text-center">1</span>
+                            <span className="flex-1 text-center">2</span>
+                            <span className="flex-1 text-center">3</span>
+                            <span className="flex-1 text-center">4</span>
+                            <span className="flex-1 text-center">5</span>
+                            <span className="flex-1 text-center">6</span>
+                            <span className="flex-1 text-center text-dark/60 font-black">7</span>
+                            <span className="flex-1 text-center">8</span>
+                            <span className="flex-1 text-center text-primary font-black">9</span>
+                            <span className="flex-1 text-center">10</span>
+                            <span className="flex-1 text-center">11</span>
+                            <span className="flex-1 text-center">12</span>
+                            <span className="flex-1 text-center">13</span>
+                            <span className="flex-1 text-center">14</span>
+                        </div>
+
+                        {/*  Bottom Markers  */}
+                        <div className="absolute bottom-12 md:bottom-16 left-[10.71%] -translate-x-1/2 hidden sm:flex flex-col items-center gap-2 opacity-80 hover:opacity-100 transition-opacity group">
+                            <div className="w-px h-8 md:h-12 bg-red-500/30"></div>
+                            <div className="flex flex-col items-center transform group-hover:translate-y-1 transition-transform">
+                                <span className="text-[9px] text-red-500 font-bold">pH 2.0</span>
+                                <span className="text-[10px] md:text-xs font-bold text-dark/80 whitespace-nowrap">Limão</span>
+                            </div>
+                        </div>
+
+                        <div className="absolute bottom-12 md:bottom-16 left-[25.00%] -translate-x-1/2 hidden sm:flex flex-col items-center gap-2 opacity-80 hover:opacity-100 transition-opacity group">
+                            <div className="w-px h-8 md:h-12 bg-amber-500/30"></div>
+                            <div className="flex flex-col items-center transform group-hover:translate-y-1 transition-transform">
+                                <span className="text-[9px] text-amber-500 font-bold">pH 4.0</span>
+                                <span className="text-[10px] md:text-xs font-bold text-dark/80 whitespace-nowrap">Cerveja</span>
+                            </div>
+                        </div>
+
+                        <div className="absolute bottom-12 md:bottom-16 left-[39.28%] -translate-x-1/2 hidden sm:flex flex-col items-center gap-2 opacity-80 hover:opacity-100 transition-opacity group">
+                            <div className="w-px h-8 md:h-12 bg-yellow-500/30"></div>
+                            <div className="flex flex-col items-center transform group-hover:translate-y-1 transition-transform">
+                                <span className="text-[9px] text-yellow-500 font-bold">pH 6.0</span>
+                                <span className="text-[10px] md:text-xs font-bold text-dark/80 whitespace-nowrap">Carnes / Leite</span>
+                            </div>
+                        </div>
+
+                        <div className="absolute bottom-0 left-[60.69%] -translate-x-1/2 flex flex-col items-center gap-2 z-20">
+                            <div className="w-px h-8 md:h-12 bg-primary/40"></div>
+                            <div className="p-2 sm:p-3 md:p-4 rounded-2xl bg-white border border-primary/20 shadow-xl backdrop-blur-md group transition-all duration-500 hover:scale-105 text-center min-w-[110px] sm:min-w-[140px]">
+                                <div className="flex items-center justify-center gap-1 sm:gap-2 mb-1">
+                                    <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-primary animate-pulse"></div>
+                                    <div className="text-primary font-bold text-[8px] sm:text-[9px] md:text-[10px] tracking-[0.2em] uppercase">AquaVita</div>
+                                </div>
+                                <div className="text-dark font-display font-bold text-lg sm:text-xl md:text-2xl leading-none mb-1">8.5 — 9.5</div>
+                                <div className="text-[7px] sm:text-[8px] md:text-[9px] text-dark/50 font-medium uppercase tracking-tighter">Zona de Saúde Máxima</div>
+                            </div>
+                        </div>
+
+                        <div className="absolute bottom-12 md:bottom-16 left-[74.97%] -translate-x-1/2 hidden sm:flex flex-col items-center gap-2 opacity-80 hover:opacity-100 transition-opacity group">
+                            <div className="w-px h-8 md:h-12 bg-indigo-500/30"></div>
+                            <div className="flex flex-col items-center transform group-hover:translate-y-1 transition-transform">
+                                <span className="text-[9px] text-indigo-500 font-bold">pH 11.0</span>
+                                <span className="text-[10px] md:text-xs font-bold text-dark/80 whitespace-nowrap">Vegetais Crus</span>
+                            </div>
+                        </div>
+                        
+                        {/*  Acid/Alkaline Background Labels  */}
+                        <div className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-4 md:-translate-x-8 -rotate-90 text-[8px] font-bold text-red-500 uppercase tracking-widest opacity-50">Ácido</div>
+                        <div className="absolute top-1/2 right-0 -translate-y-1/2 translate-x-4 md:translate-x-8 -rotate-90 text-[8px] font-bold text-purple-500 uppercase tracking-widest opacity-50">Alcalino</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    {/*  ÁGUA OZONIZADA (DETALHAMENTO)  */}
+    <section id="ozonio" className="py-32 relative overflow-hidden bg-light">
+        <div className="max-w-7xl mx-auto px-6">
+            <div className="flex flex-col lg:flex-row-reverse gap-20 items-center">
+                <div className="w-full lg:w-1/2 reveal">
+                    <div className="relative rounded-[2.5rem] overflow-hidden aspect-[9/16] max-w-sm mx-auto border border-dark/5 group shadow-xl bg-black" id="ozonio-video-container">
+                        <iframe 
+                            className="absolute inset-0 w-full h-full" 
+                            src="https://www.youtube.com/embed/SLo_hF_j2FM?autoPlay=1&mute=1&loop=1&playlist=SLo_hF_j2FM&controls=1&rel=0&modestbranding=1&playsInline=1&vq=hd1080" 
+                            frameBorder="0" 
+                            allow="autoPlay; encrypted-media" 
+                            loading="lazy"
+                            allowFullScreen>
+                        </iframe>
+                        <div className="absolute inset-0 bg-gradient-to-t from-dark/60 via-dark/10 to-transparent pointer-events-none"></div>
+                        
+                        {/*  Benefícios em destaque sobre o vídeo  */}
+                        <div className="absolute top-6 right-6 flex flex-col gap-3 items-end pointer-events-none">
+                            <div className="px-4 py-2 rounded-full glass border border-white/40 text-xs font-bold text-dark shadow-lg flex items-center gap-2 transform translate-x-4 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-500 delay-100">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0891B2" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                Elimina 99% das Bactérias
+                            </div>
+                            <div className="px-4 py-2 rounded-full glass border border-white/40 text-xs font-bold text-dark shadow-lg flex items-center gap-2 transform translate-x-4 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-500 delay-200">
+                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0891B2" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                                Purificação Ativa
+                            </div>
+                        </div>
+
+                        <div className="absolute bottom-8 left-8 pointer-events-none">
+                            <div className="px-4 py-2 rounded-full bg-primary/90 backdrop-blur-md border border-white/20 text-xs font-bold uppercase tracking-widest text-white shadow-lg">Tecnologia O₃</div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div className="w-full lg:w-1/2 reveal">
+                    <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight mb-8 leading-[1.1] text-dark">
+                        O Poder do Oxigênio Ativo<br /><span className="text-dark/30">em sua Cozinha.</span>
+                    </h2>
+                    <div className="space-y-8">
+                        <div className="flex gap-6">
+                            <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+                            </div>
+                            <div>
+                                <h4 className="font-display font-bold text-xl mb-2 text-dark">Escudo Contra Agrotóxicos</h4>
+                                <p className="text-dark/50 font-light leading-relaxed">Essencial para famílias e agricultores: o ozônio degrada moléculas de pesticidas e herbicidas presentes na superfície de frutas e vegetais.</p>
+                            </div>
+                        </div>
+                        <div className="flex gap-6">
+                            <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary">
+                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.5 2 7a8 8 0 0 1-7 7.93V20a2 2 0 0 1-2 2H9"/></svg>
+                            </div>
+                            <div>
+                                <h4 className="font-display font-bold text-xl mb-2 text-dark">Segurança Alimentar</h4>
+                                <p className="text-dark/50 font-light leading-relaxed">Ideal para a higienização de frutas, verduras e carnes. O ozônio remove agrotóxicos e pesticidas da superfície dos alimentos, garantindo uma refeição verdadeiramente limpa.</p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -669,192 +882,42 @@ export default function App() {
         </div>
     </section>
 
-    {/*  ÁGUA ALCALINA (DETALHAMENTO)  */}
-    <section id="alcalina" className="py-32 relative bg-white">
-        <div className="max-w-7xl mx-auto px-6">
-            {/*  Text Content First  */}
-            <div className="text-center max-w-3xl mx-auto mb-20 reveal">
-                <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight mb-8 leading-[1.1] text-dark">
-                    O Equilíbrio que seu<br /><span className="text-dark/30">Corpo Merece.</span>
-                </h2>
-                <p className="text-dark/50 text-lg font-light leading-relaxed mb-10">
-                    Nosso organismo luta diariamente contra a acidez causada pelo estresse e má alimentação. A água alcalina ionizada é a ferramenta definitiva para restaurar sua vitalidade.
+    {/*  SOBRE / NOSSA ESSÊNCIA (OTIMIZADA PARA PC E MOBILE)  */}
+    <section id="sobre" className="py-32 relative border-b border-dark/5 bg-white">
+        <div className="max-w-4xl mx-auto px-6 text-center reveal">
+            <div className="inline-block mb-6 px-4 py-1.5 rounded-full bg-primary/5 border border-primary/10 text-[10px] font-bold tracking-[0.2em] uppercase text-primary">
+                Nossa Essência
+            </div>
+            <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight mb-8 leading-[1.1] text-dark">
+                Sua Solução Completa<br />em Purificação.
+            </h2>
+            <div className="space-y-6 text-dark/50 font-light text-lg leading-relaxed">
+                <p>
+                    A AquaVita é referência em hidratação inteligente, oferecendo as melhores marcas do mercado como <strong>Hoken, Planeta Água e Ulfer</strong>. Nossa missão é garantir que sua família tenha acesso à água da mais alta qualidade, independente do seu equipamento.
                 </p>
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 text-left">
-                    <div className="glass-card p-6 rounded-3xl border-l-4 border-primary">
-                        <h4 className="font-display font-bold text-lg mb-2 text-primary">Equilíbrio Metabólico</h4>
-                        <p className="text-xs text-dark/50 font-light leading-relaxed">Auxilia na regulação do pH sanguíneo, otimizando processos enzimáticos e reduzindo a fadiga.</p>
-                    </div>
-                    <div className="glass-card p-6 rounded-3xl border-l-4 border-dark/10">
-                        <h4 className="font-display font-bold text-lg mb-2 text-dark">Poder Antioxidante</h4>
-                        <p className="text-xs text-dark/50 font-light leading-relaxed">Combate radicais livres e o envelhecimento precoce através da ionização negativa.</p>
-                    </div>
-                </div>
+                <p>
+                    Além da venda de purificadores premium, somos especialistas em <strong>peças, acessórios e refis para todas as marcas do mercado</strong>. Atendemos toda a região Noroeste do Rio Grande do Sul com assistência técnica ágil e peças originais para manter seu sistema sempre perfeito.
+                </p>
             </div>
-
-            {/*  Ultra-Premium Responsive Horizontal pH Scale  */}
-            <div className="w-full reveal">
-                <div className="mt-16 flex flex-col p-6 md:p-12 rounded-[2.5rem] md:rounded-[3rem] bg-light border border-dark/5 relative overflow-hidden shadow-sm">
-                    <div className="text-center max-w-3xl mx-auto mb-12">
-                        <h4 className="font-display font-bold text-3xl md:text-4xl text-dark mb-4">Pilar de Vitalidade</h4>
-                        <p className="text-[10px] text-dark/40 uppercase tracking-[0.2em] font-bold mb-6">Monitoramento de pH</p>
-                        <p className="text-dark/50 text-base font-light leading-relaxed mb-8">
-                            Visualize o espectro da saúde. Enquanto a maioria das águas e bebidas comuns puxam seu corpo para a zona ácida, a AquaVita mantém você na <strong>Zona de Saúde Máxima</strong>.
-                        </p>
+            
+            <div className="flex flex-wrap justify-center gap-12 mt-16">
+                <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m22 4-11 11-3-3"/></svg>
                     </div>
-
-                    {/*  Horizontal Scale  */}
-                    <div className="w-full relative pt-24 pb-32 md:pt-28 md:pb-36 px-4 md:px-8 max-w-5xl mx-auto">
-                        
-                        {/*  Top Markers (Acidic/Neutral)  */}
-                        <div className="absolute top-0 left-[17.85%] -translate-x-1/2 flex flex-col items-center gap-2 opacity-80 hover:opacity-100 transition-opacity group">
-                            <div className="flex flex-col items-center transform group-hover:-translate-y-1 transition-transform">
-                                <span className="text-[9px] sm:text-[10px] md:text-xs font-bold text-dark/80 whitespace-nowrap">Refrigerante</span>
-                                <span className="text-[8px] sm:text-[9px] text-red-500 font-bold">pH 3.0</span>
-                            </div>
-                            <div className="w-px h-8 md:h-12 bg-red-500/30"></div>
-                        </div>
-
-                        <div className="absolute top-0 left-[32.13%] -translate-x-1/2 hidden sm:flex flex-col items-center gap-2 opacity-80 hover:opacity-100 transition-opacity group">
-                            <div className="flex flex-col items-center transform group-hover:-translate-y-1 transition-transform">
-                                <span className="text-[10px] md:text-xs font-bold text-dark/80 whitespace-nowrap">Café</span>
-                                <span className="text-[9px] text-yellow-600 font-bold">pH 5.0</span>
-                            </div>
-                            <div className="w-px h-8 md:h-12 bg-yellow-600/30"></div>
-                        </div>
-
-                        <div className="absolute top-0 left-[46.41%] -translate-x-1/2 flex flex-col items-center gap-2 opacity-80 hover:opacity-100 transition-opacity group">
-                            <div className="flex flex-col items-center transform group-hover:-translate-y-1 transition-transform">
-                                <span className="text-[9px] sm:text-[10px] md:text-xs font-bold text-dark/80 whitespace-nowrap">Água Comum</span>
-                                <span className="text-[8px] sm:text-[9px] text-green-600 font-bold">pH 7.0</span>
-                            </div>
-                            <div className="w-px h-8 md:h-12 bg-green-600/30"></div>
-                        </div>
-
-                        {/*  The Color Bar  */}
-                        <div className="flex w-full h-6 md:h-10 rounded-full overflow-hidden shadow-inner border border-dark/10">
-                            <div className="flex-1 bg-[#dc2626]"></div> {/*  1  */}
-                            <div className="flex-1 bg-[#ef4444]"></div> {/*  2  */}
-                            <div className="flex-1 bg-[#f97316]"></div> {/*  3  */}
-                            <div className="flex-1 bg-[#f59e0b]"></div> {/*  4  */}
-                            <div className="flex-1 bg-[#eab308]"></div> {/*  5  */}
-                            <div className="flex-1 bg-[#fde047]"></div> {/*  6  */}
-                            <div className="flex-1 bg-[#22c55e]"></div> {/*  7  */}
-                            <div className="flex-1 bg-[#10b981]"></div> {/*  8  */}
-                            <div className="flex-1 bg-[#06b6d4]"></div> {/*  9  */}
-                            <div className="flex-1 bg-[#0ea5e9]"></div> {/*  10  */}
-                            <div className="flex-1 bg-[#3b82f6]"></div> {/*  11  */}
-                            <div className="flex-1 bg-[#6366f1]"></div> {/*  12  */}
-                            <div className="flex-1 bg-[#8b5cf6]"></div> {/*  13  */}
-                            <div className="flex-1 bg-[#a855f7]"></div> {/*  14  */}
-                        </div>
-
-                        {/*  Numbers  */}
-                        <div className="flex w-full justify-between px-2 md:px-4 mt-3 text-[8px] sm:text-[10px] md:text-xs font-bold text-dark/30">
-                            <span className="flex-1 text-center">1</span>
-                            <span className="flex-1 text-center">2</span>
-                            <span className="flex-1 text-center">3</span>
-                            <span className="flex-1 text-center">4</span>
-                            <span className="flex-1 text-center">5</span>
-                            <span className="flex-1 text-center">6</span>
-                            <span className="flex-1 text-center text-dark/60 font-black">7</span>
-                            <span className="flex-1 text-center">8</span>
-                            <span className="flex-1 text-center text-primary font-black">9</span>
-                            <span className="flex-1 text-center">10</span>
-                            <span className="flex-1 text-center">11</span>
-                            <span className="flex-1 text-center">12</span>
-                            <span className="flex-1 text-center">13</span>
-                            <span className="flex-1 text-center">14</span>
-                        </div>
-
-                        {/*  Bottom Markers (Alkaline)  */}
-                        <div className="absolute bottom-0 left-[60.69%] -translate-x-1/2 flex flex-col items-center gap-2 z-20">
-                            <div className="w-px h-8 md:h-12 bg-primary/40"></div>
-                            <div className="p-2 sm:p-3 md:p-4 rounded-2xl bg-white border border-primary/20 shadow-xl backdrop-blur-md group transition-all duration-500 hover:scale-105 text-center min-w-[110px] sm:min-w-[140px]">
-                                <div className="flex items-center justify-center gap-1 sm:gap-2 mb-1">
-                                    <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 rounded-full bg-primary animate-pulse"></div>
-                                    <div className="text-primary font-bold text-[8px] sm:text-[9px] md:text-[10px] tracking-[0.2em] uppercase">AquaVita</div>
-                                </div>
-                                <div className="text-dark font-display font-bold text-lg sm:text-xl md:text-2xl leading-none mb-1">8.5 — 9.5</div>
-                                <div className="text-[7px] sm:text-[8px] md:text-[9px] text-dark/50 font-medium uppercase tracking-tighter">Zona de Saúde Máxima</div>
-                            </div>
-                        </div>
-
-                        <div className="absolute bottom-12 md:bottom-16 left-[74.97%] -translate-x-1/2 hidden sm:flex flex-col items-center gap-2 opacity-80 hover:opacity-100 transition-opacity group">
-                            <div className="w-px h-8 md:h-12 bg-indigo-500/30"></div>
-                            <div className="flex flex-col items-center transform group-hover:translate-y-1 transition-transform">
-                                <span className="text-[9px] text-indigo-500 font-bold">pH 11.0</span>
-                                <span className="text-[10px] md:text-xs font-bold text-dark/80 whitespace-nowrap">Vegetais Crus</span>
-                            </div>
-                        </div>
-                        
-                        {/*  Acid/Alkaline Background Labels  */}
-                        <div className="absolute top-1/2 left-0 -translate-y-1/2 -translate-x-4 md:-translate-x-8 -rotate-90 text-[8px] font-bold text-red-500 uppercase tracking-widest opacity-50">Ácido</div>
-                        <div className="absolute top-1/2 right-0 -translate-y-1/2 translate-x-4 md:translate-x-8 -rotate-90 text-[8px] font-bold text-purple-500 uppercase tracking-widest opacity-50">Alcalino</div>
-                    </div>
+                    <span className="text-xs font-bold uppercase tracking-widest text-dark/60">Multimarcas</span>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    {/*  ÁGUA OZONIZADA (DETALHAMENTO)  */}
-    <section id="ozonio" className="py-32 relative overflow-hidden bg-light">
-        <div className="max-w-7xl mx-auto px-6">
-            <div className="flex flex-col lg:flex-row-reverse gap-20 items-center">
-                <div className="w-full lg:w-1/2 reveal">
-                    <div className="relative rounded-[2.5rem] overflow-hidden aspect-[9/16] max-w-sm mx-auto border border-dark/5 group shadow-xl bg-black" id="ozonio-video-container">
-                        <iframe 
-                            className="absolute inset-0 w-full h-full" 
-                            src="https://www.youtube.com/embed/SLo_hF_j2FM?autoPlay=1&mute=1&loop=1&playlist=SLo_hF_j2FM&controls=1&rel=0&modestbranding=1&playsInline=1&vq=hd1080" 
-                            frameBorder="0" 
-                            allow="autoPlay; encrypted-media" 
-                            loading="lazy"
-                            allowFullScreen>
-                        </iframe>
-                        <div className="absolute inset-0 bg-gradient-to-t from-dark/60 via-dark/10 to-transparent pointer-events-none"></div>
-                        
-                        {/*  Benefícios em destaque sobre o vídeo  */}
-                        <div className="absolute top-6 right-6 flex flex-col gap-3 items-end pointer-events-none">
-                            <div className="px-4 py-2 rounded-full glass border border-white/40 text-xs font-bold text-dark shadow-lg flex items-center gap-2 transform translate-x-4 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-500 delay-100">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0891B2" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                Elimina 99% das Bactérias
-                            </div>
-                            <div className="px-4 py-2 rounded-full glass border border-white/40 text-xs font-bold text-dark shadow-lg flex items-center gap-2 transform translate-x-4 opacity-0 group-hover:translate-x-0 group-hover:opacity-100 transition-all duration-500 delay-200">
-                                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#0891B2" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><polyline points="20 6 9 17 4 12"></polyline></svg>
-                                Purificação Ativa
-                            </div>
-                        </div>
-
-                        <div className="absolute bottom-8 left-8 pointer-events-none">
-                            <div className="px-4 py-2 rounded-full bg-primary/90 backdrop-blur-md border border-white/20 text-xs font-bold uppercase tracking-widest text-white shadow-lg">Tecnologia O₃</div>
-                        </div>
+                <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m22 4-11 11-3-3"/></svg>
                     </div>
+                    <span className="text-xs font-bold uppercase tracking-widest text-dark/60">Peças Originais</span>
                 </div>
-                
-                <div className="w-full lg:w-1/2 reveal">
-                    <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight mb-8 leading-[1.1] text-dark">
-                        O Poder do Oxigênio Ativo<br /><span className="text-dark/30">em sua Cozinha.</span>
-                    </h2>
-                    <div className="space-y-8">
-                        <div className="flex gap-6">
-                            <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-                            </div>
-                            <div>
-                                <h4 className="font-display font-bold text-xl mb-2 text-dark">Escudo Contra Agrotóxicos</h4>
-                                <p className="text-dark/50 font-light leading-relaxed">Essencial para famílias e agricultores: o ozônio degrada moléculas de pesticidas e herbicidas presentes na superfície de frutas e vegetais.</p>
-                            </div>
-                        </div>
-                        <div className="flex gap-6">
-                            <div className="flex-shrink-0 w-12 h-12 rounded-2xl bg-primary/10 border border-primary/20 flex items-center justify-center text-primary">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M11 20A7 7 0 0 1 9.8 6.1C15.5 5 17 4.48 19 2c1 2 2 4.5 2 7a8 8 0 0 1-7 7.93V20a2 2 0 0 1-2 2H9"/></svg>
-                            </div>
-                            <div>
-                                <h4 className="font-display font-bold text-xl mb-2 text-dark">Segurança Alimentar</h4>
-                                <p className="text-dark/50 font-light leading-relaxed">Ideal para a higienização de frutas, verduras e carnes. O ozônio remove agrotóxicos e pesticidas da superfície dos alimentos, garantindo uma refeição verdadeiramente limpa.</p>
-                            </div>
-                        </div>
+                <div className="flex items-center gap-3">
+                    <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center text-primary">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><path d="m22 4-11 11-3-3"/></svg>
                     </div>
+                    <span className="text-xs font-bold uppercase tracking-widest text-dark/60">Assistência Técnica</span>
                 </div>
             </div>
         </div>
@@ -997,7 +1060,7 @@ export default function App() {
                 </div>
                 <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight mb-6 text-dark">A Voz da Experiência.</h2>
                 <p className="text-dark/50 text-lg font-light max-w-2xl mx-auto">
-                    O impacto real na vida de quem escolheu investir no que há de melhor para sua saúde.
+                    Junte-se a mais de <strong className="text-dark font-medium">2.000 famílias</strong> que já foram beneficiadas, confiam e recomendam o nosso trabalho para transformar a saúde de quem amam.
                 </p>
             </div>
 
@@ -1236,8 +1299,8 @@ export default function App() {
                 </div>
 
                 {/* Middle: Links & Contact (col-span-3) */}
-                <div className="lg:col-span-3 flex flex-col gap-10">
-                    <div>
+                <div className="lg:col-span-3 flex flex-col sm:flex-row lg:flex-col gap-10">
+                    <div className="flex-1">
                         <h4 className="font-bold text-sm tracking-widest uppercase text-white mb-6">Navegação</h4>
                         <ul className="flex flex-col gap-3 text-sm text-white/60 font-light">
                             <li><a href="#diferenciais" className="hover:text-primary transition-colors">Tecnologia</a></li>
@@ -1246,7 +1309,7 @@ export default function App() {
                             <li><a href="#sobre" className="hover:text-primary transition-colors">Sobre Nós</a></li>
                         </ul>
                     </div>
-                    <div>
+                    <div className="flex-1">
                         <h4 className="font-bold text-sm tracking-widest uppercase text-white mb-6">Atendimento</h4>
                         <ul className="flex flex-col gap-3 text-sm text-white/60 font-light">
                             <li className="flex items-center gap-2">
