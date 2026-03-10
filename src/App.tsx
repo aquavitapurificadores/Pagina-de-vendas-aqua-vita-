@@ -7,6 +7,7 @@ gsap.registerPlugin(ScrollTrigger);
 export default function App() {
   const trackRef = useRef(null);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const slideCount = 6; // We have 6 images
 
   useEffect(() => {
@@ -140,7 +141,7 @@ export default function App() {
 
     {/*  HEADER  */}
     <header className="fixed top-0 left-0 w-full z-50 transition-all duration-500" id="header">
-        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+        <div className="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between relative z-50">
             {/*  SLIM TECH LOGO  */}
             <div className="flex items-center gap-4 group cursor-pointer">
                 <div className="w-7 h-7 flex items-center justify-center">
@@ -160,9 +161,31 @@ export default function App() {
                 <a href="#alcalina" className="hover:text-primary transition-colors">Alcalina</a>
                 <a href="#sobre" className="hover:text-primary transition-colors">Sobre</a>
             </nav>
-            <a href="https://wa.me/5554999997286" target="_blank" rel="noopener noreferrer" className="bg-dark text-white px-4 md:px-7 py-2 md:py-2.5 rounded-full text-[9px] md:text-[10px] font-bold hover:bg-primary transition-all duration-300 uppercase tracking-[0.15em] md:tracking-[0.2em] cta-hover">
-                Falar com Especialista
-            </a>
+            <div className="flex items-center gap-3 md:gap-4">
+                <a href="https://wa.me/5554999997286" target="_blank" rel="noopener noreferrer" className="bg-dark text-white px-4 md:px-7 py-2 md:py-2.5 rounded-full text-[9px] md:text-[10px] font-bold hover:bg-primary transition-all duration-300 uppercase tracking-[0.15em] md:tracking-[0.2em] cta-hover">
+                    Falar com Especialista
+                </a>
+                {/* Mobile Menu Toggle */}
+                <button 
+                    className="md:hidden w-10 h-10 flex flex-col items-center justify-center gap-1.5 focus:outline-none"
+                    onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                    aria-label="Toggle Menu"
+                >
+                    <span className={`block w-5 h-[2px] bg-dark transition-all duration-300 ${isMobileMenuOpen ? 'rotate-45 translate-y-[8px]' : ''}`}></span>
+                    <span className={`block w-5 h-[2px] bg-dark transition-all duration-300 ${isMobileMenuOpen ? 'opacity-0' : ''}`}></span>
+                    <span className={`block w-5 h-[2px] bg-dark transition-all duration-300 ${isMobileMenuOpen ? '-rotate-45 -translate-y-[8px]' : ''}`}></span>
+                </button>
+            </div>
+        </div>
+
+        {/* Mobile Menu Overlay */}
+        <div className={`fixed inset-0 bg-white/98 backdrop-blur-xl z-40 transition-all duration-500 flex flex-col items-center justify-center md:hidden ${isMobileMenuOpen ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'}`}>
+            <nav className="flex flex-col items-center gap-8 text-sm font-semibold text-dark tracking-[0.2em] uppercase">
+                <a href="#diferenciais" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-primary transition-colors">Tecnologia</a>
+                <a href="#ozonio" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-primary transition-colors">Ozônio</a>
+                <a href="#alcalina" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-primary transition-colors">Alcalina</a>
+                <a href="#sobre" onClick={() => setIsMobileMenuOpen(false)} className="hover:text-primary transition-colors">Sobre</a>
+            </nav>
         </div>
     </header>
 
@@ -196,26 +219,29 @@ export default function App() {
                         </a>
                     </div>
                     
-                    {/* Social Proof Badge */}
-                    <div className="hero-elem mt-12 flex items-center justify-center lg:justify-start gap-4">
-                        <div className="flex -space-x-3">
-                            <img src="https://i.pravatar.cc/100?img=1" alt="Cliente" className="w-10 h-10 rounded-full border-2 border-white shadow-sm" referrerPolicy="no-referrer" />
-                            <img src="https://i.pravatar.cc/100?img=2" alt="Cliente" className="w-10 h-10 rounded-full border-2 border-white shadow-sm" referrerPolicy="no-referrer" />
-                            <img src="https://i.pravatar.cc/100?img=3" alt="Cliente" className="w-10 h-10 rounded-full border-2 border-white shadow-sm" referrerPolicy="no-referrer" />
-                            <div className="w-10 h-10 rounded-full border-2 border-white bg-light flex items-center justify-center shadow-sm z-10">
-                                <span className="text-[10px] font-bold text-primary">+2k</span>
+                    {/* Social Proof Badge Premium */}
+                    <div className="hero-elem mt-12 inline-flex items-center gap-4 sm:gap-5 bg-white/80 backdrop-blur-xl border border-dark/5 p-2.5 sm:p-3 pr-5 sm:pr-8 rounded-full shadow-[0_8px_30px_rgb(0,0,0,0.04)] hover:shadow-[0_8px_30px_rgb(0,0,0,0.08)] transition-all duration-500 hover:-translate-y-1 group cursor-default">
+                        <div className="flex -space-x-3 sm:-space-x-4">
+                            <img src="https://i.pravatar.cc/100?img=1" alt="Cliente" className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border-[3px] border-white shadow-sm group-hover:scale-105 transition-transform duration-300 delay-75" referrerPolicy="no-referrer" />
+                            <img src="https://i.pravatar.cc/100?img=5" alt="Cliente" className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border-[3px] border-white shadow-sm group-hover:scale-105 transition-transform duration-300 delay-100" referrerPolicy="no-referrer" />
+                            <img src="https://i.pravatar.cc/100?img=3" alt="Cliente" className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border-[3px] border-white shadow-sm group-hover:scale-105 transition-transform duration-300 delay-150" referrerPolicy="no-referrer" />
+                            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full border-[3px] border-white bg-gradient-to-br from-primary to-primary/80 flex items-center justify-center shadow-sm z-10 text-white group-hover:scale-105 transition-transform duration-300 delay-200">
+                                <span className="text-[10px] sm:text-xs font-bold">+2k</span>
                             </div>
                         </div>
                         <div className="flex flex-col text-left">
-                            <div className="flex items-center gap-1 text-yellow-500 mb-0.5">
-                                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
-                                <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                            <div className="flex items-center gap-1.5 mb-0.5 sm:mb-1">
+                                <div className="flex gap-0.5 text-yellow-400">
+                                    <svg width="12" height="12" className="sm:w-3.5 sm:h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                    <svg width="12" height="12" className="sm:w-3.5 sm:h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                    <svg width="12" height="12" className="sm:w-3.5 sm:h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                    <svg width="12" height="12" className="sm:w-3.5 sm:h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                    <svg width="12" height="12" className="sm:w-3.5 sm:h-3.5" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                                </div>
+                                <span className="text-[9px] sm:text-[10px] font-bold text-dark/40 uppercase tracking-widest">5.0 Google</span>
                             </div>
-                            <span className="text-[11px] font-medium text-dark/70">
-                                Mais de <strong className="text-dark">2.000 famílias</strong> beneficiadas<br/>que confiam e recomendam.
+                            <span className="text-[10px] sm:text-xs font-medium text-dark/70 leading-tight">
+                                Mais de <strong className="text-dark font-bold">2.000 famílias</strong><br/>beneficiadas e protegidas.
                             </span>
                         </div>
                     </div>
@@ -306,63 +332,90 @@ export default function App() {
         </div>
     </div>
 
-    {/*  DORES (O PESO INVISÍVEL)  */}
-    <section className="py-32 bg-light border-y border-dark/5">
-        <div className="max-w-7xl mx-auto px-6">
+    {/*  DORES (O PESO INVISÍVEL) - PREMIUM DARK SECTION  */}
+    <section className="py-32 bg-zinc-950 text-white relative overflow-hidden">
+        {/* Subtle background glow */}
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full max-w-3xl h-[500px] bg-red-500/10 blur-[120px] rounded-full pointer-events-none"></div>
+        
+        <div className="max-w-7xl mx-auto px-6 relative z-10">
             <div className="text-center mb-20 reveal">
-                <div className="inline-block mb-6 px-4 py-1.5 rounded-full bg-red-500/5 border border-red-500/10 text-[10px] font-bold tracking-[0.2em] uppercase text-red-500">
-                    A Realidade Oculta
+                <div className="inline-block mb-6 px-4 py-1.5 rounded-full bg-red-500/10 border border-red-500/20 text-[10px] font-bold tracking-[0.2em] uppercase text-red-400">
+                    A Ilusão da Água Tratada
                 </div>
-                <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight mb-6 text-dark">
-                    Você sabe o que realmente tem<br />dentro da sua água?
+                <h2 className="font-display text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 text-white">
+                    O Inimigo Invisível<br />na Sua Torneira
                 </h2>
-                <p className="text-dark/50 text-lg font-light max-w-2xl mx-auto">
-                    A rotina de consumir água da torneira ou de galões duvidosos esconde problemas que afetam diretamente a sua saúde.
+                <p className="text-zinc-400 text-lg font-light max-w-2xl mx-auto">
+                    Por que sistemas comuns não protegem mais a sua família.
                 </p>
             </div>
 
-            <div className="flex flex-col lg:flex-row gap-16 items-center mb-20">
-                <div className="w-full lg:w-1/2 reveal">
-                    <div className="relative rounded-[2.5rem] overflow-hidden aspect-[9/16] max-w-sm mx-auto border border-dark/5 group shadow-xl bg-black">
-                        <iframe 
-                            className="absolute inset-0 w-full h-full" 
-                            src="https://www.youtube.com/embed/eOu7WNEwfvg?autoPlay=1&mute=1&loop=1&playlist=eOu7WNEwfvg&controls=1&rel=0&modestbranding=1&playsInline=1&vq=hd1080" 
-                            frameBorder="0" 
-                            allow="autoPlay; encrypted-media" 
-                            loading="lazy"
-                            allowFullScreen>
-                        </iframe>
-                        <div className="absolute inset-0 bg-gradient-to-t from-dark/80 via-dark/20 to-transparent pointer-events-none"></div>
+            <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-center mb-10">
+                <div className="w-full lg:w-5/12 reveal">
+                    <div className="relative max-w-sm mx-auto">
+                        {/* Video Glow */}
+                        <div className="absolute inset-0 bg-gradient-to-tr from-red-500/20 to-orange-500/20 blur-3xl rounded-full transform scale-90"></div>
                         
-                        <div className="absolute bottom-8 left-8 right-8 pointer-events-none">
-                            <div className="px-4 py-2 rounded-full bg-red-500/90 backdrop-blur-md border border-white/20 text-[10px] font-bold uppercase tracking-widest text-white shadow-lg inline-block mb-3">Análise Microscópica</div>
-                            <p className="text-white text-sm font-medium leading-tight">A água que parece limpa a olho nu pode esconder microorganismos nocivos à sua saúde.</p>
+                        {/* Video Container (Premium Phone/Glass Frame) */}
+                        <div className="relative rounded-[2.5rem] overflow-hidden aspect-[9/16] border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] bg-black ring-1 ring-white/5 p-2 backdrop-blur-sm">
+                            <div className="w-full h-full rounded-[2rem] overflow-hidden relative bg-zinc-900">
+                                <iframe 
+                                    className="absolute inset-0 w-full h-full" 
+                                    src="https://www.youtube.com/embed/yePM4804HG4?controls=1&rel=0&modestbranding=1&playsInline=1&vq=hd1080" 
+                                    frameBorder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    loading="lazy"
+                                    allowFullScreen>
+                                </iframe>
+                            </div>
                         </div>
                     </div>
                 </div>
 
-                <div className="w-full lg:w-1/2 reveal">
-                    <div className="grid grid-cols-1 gap-8">
-                        <div className="glass-card rounded-[2.5rem] p-8 group hover:border-red-500/20 transition-colors">
-                            <div className="w-12 h-12 rounded-2xl bg-red-500/5 flex items-center justify-center mb-6 text-red-500">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l6 0"/><path d="M12 9l0 6"/></svg>
+                <div className="w-full lg:w-7/12 reveal">
+                    <div className="grid grid-cols-1 gap-6">
+                        {/* Card 1 */}
+                        <div className="bg-white/[0.02] border border-white/[0.05] rounded-[2rem] p-8 backdrop-blur-md hover:bg-white/[0.04] hover:border-white/[0.1] transition-all duration-500 group">
+                            <div className="flex items-start gap-6">
+                                <div className="w-14 h-14 shrink-0 rounded-2xl bg-red-500/10 border border-red-500/20 flex items-center justify-center text-red-400 group-hover:scale-110 transition-transform duration-500">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l6 0"/><path d="M12 9l0 6"/></svg>
+                                </div>
+                                <div>
+                                    <h3 className="font-display text-xl font-bold mb-2 text-white">O Paradoxo do Cloro</h3>
+                                    <p className="text-zinc-400 font-light text-sm leading-relaxed">A reação química nas tubulações gera Trihalometanos (THMs), toxinas invisíveis que a filtragem comum não consegue reter.</p>
+                                </div>
                             </div>
-                            <h3 className="font-display text-xl font-bold mb-3 text-dark">Risco de Contaminação</h3>
-                            <p className="text-dark/50 font-light text-sm leading-relaxed">Água da torneira ou galões mal higienizados proliferam bactérias invisíveis, parasitas e liberam toxinas do plástico (BPA).</p>
                         </div>
-                        <div className="glass-card rounded-[2.5rem] p-8 group hover:border-orange-500/20 transition-colors">
-                            <div className="w-12 h-12 rounded-2xl bg-orange-500/5 flex items-center justify-center mb-6 text-orange-500">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"/><polyline points="3.27 6.96 12 12.01 20.73 6.96"/><line x1="12" y1="22.08" x2="12" y2="12"/></svg>
+
+                        {/* Card 2 - Highlighted Alert */}
+                        <div className="bg-orange-500/[0.05] border border-orange-500/30 rounded-[2rem] p-8 backdrop-blur-md hover:bg-orange-500/[0.08] hover:border-orange-500/50 transition-all duration-500 group relative overflow-hidden shadow-[0_0_30px_rgba(249,115,22,0.05)]">
+                            <div className="absolute inset-0 bg-gradient-to-r from-orange-500/10 to-transparent opacity-50"></div>
+                            <div className="flex items-start gap-6 relative z-10">
+                                <div className="w-14 h-14 shrink-0 rounded-2xl bg-orange-500/20 border border-orange-500/40 flex items-center justify-center text-orange-400 group-hover:scale-110 transition-transform duration-500 shadow-[0_0_15px_rgba(249,115,22,0.3)] animate-[pulse_3s_ease-in-out_infinite]">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M10.29 3.86L1.82 18a2 2 0 0 0 1.71 3h16.94a2 2 0 0 0 1.71-3L13.71 3.86a2 2 0 0 0-3.42 0z"/><line x1="12" y1="9" x2="12" y2="13"/><line x1="12" y1="17" x2="12.01" y2="17"/></svg>
+                                </div>
+                                <div>
+                                    <div className="flex items-center gap-3 mb-2">
+                                        <h3 className="font-display text-xl font-bold text-orange-50">Alerta Científico</h3>
+                                        <span className="px-2 py-0.5 rounded-full bg-orange-500/20 text-orange-400 text-[9px] font-bold uppercase tracking-widest border border-orange-500/30">Atenção</span>
+                                    </div>
+                                    <p className="text-orange-100/70 font-light text-sm leading-relaxed">Estudos europeus recentes associam o consumo prolongado desses químicos a <strong className="text-orange-200 font-medium">riscos silenciosos e severos</strong> para a saúde a longo prazo.</p>
+                                </div>
                             </div>
-                            <h3 className="font-display text-xl font-bold mb-3 text-dark">O Peso do Desconforto</h3>
-                            <p className="text-dark/50 font-light text-sm leading-relaxed">Carregar 20kg repetidamente causa microlesões na coluna. Além do incômodo de ficar sem água no meio da noite ou final de semana.</p>
                         </div>
-                        <div className="glass-card rounded-[2.5rem] p-8 group hover:border-primary/20 transition-colors">
-                            <div className="w-12 h-12 rounded-2xl bg-primary/5 flex items-center justify-center mb-6 text-primary">
-                                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+
+                        {/* Card 3 */}
+                        <div className="bg-white/[0.02] border border-white/[0.05] rounded-[2rem] p-8 backdrop-blur-md hover:bg-white/[0.04] hover:border-emerald-500/30 transition-all duration-500 group relative overflow-hidden">
+                            <div className="absolute inset-0 bg-gradient-to-r from-emerald-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+                            <div className="flex items-start gap-6 relative z-10">
+                                <div className="w-14 h-14 shrink-0 rounded-2xl bg-emerald-500/10 border border-emerald-500/20 flex items-center justify-center text-emerald-400 group-hover:scale-110 transition-transform duration-500 shadow-[0_0_15px_rgba(16,185,129,0.2)]">
+                                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="M9 12l2 2 4-4"/></svg>
+                                </div>
+                                <div>
+                                    <h3 className="font-display text-xl font-bold mb-2 text-white">A Solução AquaVita</h3>
+                                    <p className="text-zinc-400 font-light text-sm leading-relaxed">Retenção absoluta através de blocos de Carvão Ativado de alta densidade e esterilização orgânica e natural por Ozônio.</p>
+                                </div>
                             </div>
-                            <h3 className="font-display text-xl font-bold mb-3 text-dark">Gasto Invisível</h3>
-                            <p className="text-dark/50 font-light text-sm leading-relaxed">Comprar galões semanalmente parece barato, mas ao longo de um ano, você gasta o suficiente para comprar um purificador premium.</p>
                         </div>
                     </div>
                 </div>
@@ -1049,6 +1102,13 @@ export default function App() {
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top,rgba(8,145,178,0.03)_0%,transparent_70%)]"></div>
         <div className="max-w-7xl mx-auto px-6 relative z-10">
             <div className="text-center mb-20 reveal">
+                <div className="flex flex-col items-center justify-center mb-12">
+                    <div className="font-display text-6xl md:text-8xl font-black text-primary mb-2 flex items-center tracking-tighter">
+                        +<span className="counter" data-target="2000">0</span>
+                    </div>
+                    <div className="text-dark/40 uppercase tracking-[0.3em] font-bold text-xs md:text-sm">Famílias Beneficiadas</div>
+                </div>
+
                 <div className="inline-flex items-center justify-center gap-2 mb-6">
                     <svg viewBox="0 0 24 24" width="28" height="28" xmlns="http://www.w3.org/2000/svg">
                         <path d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" fill="#4285F4"/>
@@ -1060,7 +1120,7 @@ export default function App() {
                 </div>
                 <h2 className="font-display text-4xl md:text-5xl font-bold tracking-tight mb-6 text-dark">A Voz da Experiência.</h2>
                 <p className="text-dark/50 text-lg font-light max-w-2xl mx-auto">
-                    Junte-se a mais de <strong className="text-dark font-medium">2.000 famílias</strong> que já foram beneficiadas, confiam e recomendam o nosso trabalho para transformar a saúde de quem amam.
+                    Junte-se a milhares de pessoas que já transformaram a saúde de quem amam. O impacto real na vida de quem escolheu investir no que há de melhor.
                 </p>
             </div>
 
